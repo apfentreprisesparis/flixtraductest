@@ -1,0 +1,13 @@
+<p><%= pluralize(@movies.count, 'Movie') %></p>
+<ul>
+  <% @movies.each do |movie| %>
+      <li>
+        <%= link_to(movie.title, movie) %>
+        <%= movie.rating %>
+        <%= truncate(movie.description, length: 40, separator: ' ') %>
+        <%= number_to_currency(movie.total_gross) %>
+      </li>
+
+
+  <% end %>
+</ul>
