@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'show the list of movies' do
 
+
   it "create the movies" do
 
     movie1 = Movie.create(title: "Iron Man",
@@ -21,28 +22,19 @@ describe 'show the list of movies' do
                           total_gross: 403706375.00,
                           description: "Peter Parker gets bit by a genetically modified spider",
                           released_on: "2002-05-03")
-
-
-
-
-  #    visit movies_path
-      visit 'http://www.localhost:3000/movies'
-
+    #    visit movies_path
+    visit 'http://www.localhost:3000/movies'
 
     expect(page).to have_text("3 Movies")
     expect(page).to have_text(movie1.title)
     expect(page).to have_text(movie2.title)
     expect(page).to have_text(movie3.title)
 
-
     expect(page).to have_text(movie1.rating)
     expect(page).to have_text(movie1.description[0,9])
     expect(page).to have_text('318,412,101.00')
 
 
-
-
   end
 
-
-  end
+end

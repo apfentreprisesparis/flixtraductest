@@ -2,9 +2,10 @@
 <%= @movie.rating %>
 <%= @movie.description %>
 <%= @movie.released_on %>
-<%= number_to_currency(@movie.total_gross) %>
+<%# = number_to_currency(@movie.total_gross) %>
 <%= format_total_gross(@movie) %>
 
 
 <%= link_to 'All Movies', movies_path %>
+<%= link_to 'Edit', edit_movie_path(@movie) %>
 

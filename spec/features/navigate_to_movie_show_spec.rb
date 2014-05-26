@@ -1,7 +1,7 @@
 require 'spec_helper'
 describe "Navigate to detail's movie" do
 
-  it "Navigate to the listing" do
+  it "Navigate vers le gabarit show" do
     expect(Movie.count).to eq(0)
     movie = Movie.create(movie_attributes)
 

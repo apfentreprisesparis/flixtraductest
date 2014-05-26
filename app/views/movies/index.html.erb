@@ -2,10 +2,14 @@
 <ul>
   <% @movies.each do |movie| %>
       <li>
+
+        <%= movie.id %>
         <%= link_to(movie.title, movie) %>
         <%= movie.rating %>
         <%= truncate(movie.description, length: 40, separator: ' ') %>
-        <%= number_to_currency(movie.total_gross) %>
+        <%= movie.released_on %>
+        <%# = number_to_currency(movie.total_gross) %>
+        <%= format_total_gross(movie) %>
       </li>
 
 
