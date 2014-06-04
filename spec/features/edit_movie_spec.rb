@@ -11,8 +11,7 @@ describe "Editing a movie" do
 
     expect(current_path).to eq(edit_movie_path(movie))
 
-
-    expect(find_field('Title').value).to eq(movie.title)
+    expect(find_field('Titre').value).to eq(movie.title)
   end
 
 end

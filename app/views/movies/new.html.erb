@@ -1,10 +1,7 @@
+<h1>New</h1>
 
-<%= @movie.title %>
 
 <%= form_for (@movie) do |f| %>
-    <p>
-      <%= f.submit %>
-    </p>
 
     <p>
       <%= f.label :id, 'Identifiant :'  %>
@@ -26,14 +23,14 @@
       <%= f.date_select :released_on %>
       <%= f.date_field :released_on %>
     </p>
-        <p>
+    <p>
       <%= f.label :total_gross %><br/>
       <%= f.number_field :total_gross %>
     </p>
 
-   <p>
-     <%= f.submit  'Envoyer' %>
-   </p>
+    <p>
+      <%= f.submit  'Créer' %>
+    </p>
 
 
 <% end %>
