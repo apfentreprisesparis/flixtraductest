@@ -5,8 +5,9 @@
 <%# = number_to_currency(@movie.total_gross) %>
 <%= format_total_gross(@movie) %>
 
-<%= link_to 'All Movies', movies_path %>
-<%= link_to 'Edit', edit_movie_path %>
-<%# = link_to 'Edit', edit_movie_path(@movie) %>
+<nav>
+<%= link_to 'All Movies', movies_path(@movies), method: :get %>
+<%= link_to 'Edit', edit_movie_path(@movie), method: :get %>
+<%= link_to 'Delete', movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' } %>
 
-
+</nav>
