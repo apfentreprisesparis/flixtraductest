@@ -18,7 +18,6 @@ it "Shows a movie's details" do
     expect(page).to have_text(movie.director)
     expect(page).to have_text(movie.duration)
     expect(page).to have_selector("img[src$='#{movie.image_file_name}']")
-
 end
 
 

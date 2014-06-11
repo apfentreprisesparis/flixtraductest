@@ -1,4 +1,12 @@
-<p><%= pluralize(@movies.count, 'Movie') %></p>
+<p>
+  <% if action_name == 'index' %>
+          <%= " #{
+            pluralize(@movies.count, 'Movie') + " dont la date de sortie est inférieure à aujourdhui, ordonné du plus récent au plus ancien..."
+        }"%>
+   <% else %>
+      <%= "Tout les films" %>
+      <% end %>
+  </p>
 <ul>
   <% @movies.each do |movie| %>
       <li>
@@ -10,10 +18,17 @@
         <%= movie.released_on %>
         <%# = number_to_currency(movie.total_gross) %>
         <%= format_total_gross(movie) %>
+        <%= link_to 'Edit', edit_movie_path(movie.id), method: :get %>
       </li>
-
   <% end %>
 </ul>
 
 <%= link_to('Add New Movie', new_movie_path) %>
+<p>
+  <%= link_to('Tout afficher', movies_all_path, controller: 'movies', action: 'tous') %>
+</p>
+<p>
+  <%= link_to('index des films sortis', movies_path, controller: 'movies', action: 'index') %>
+</p>
+
 <%= render 'movies/footer' %>

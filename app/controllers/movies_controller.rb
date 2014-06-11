@@ -53,14 +53,19 @@ class MoviesController < ApplicationController
     @movie.delete
     redirect_to movies_path
   end
+
+  def tous
+    @movies = Movie.tous
+    render :index
+  end
+
 # existing public methods (actions)
   private
 
   def movie_params
-    params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross)
+    params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross,:cast, :director, :duration, :image_file_name)
+
   end
-
-
 
 
 end

@@ -6,6 +6,7 @@ class Movie < ActiveRecord::Base
   end
   def self.released
     where('released_on<=?', Time.now).order(released_on: :desc)
+
   end
 
   def self.hit_movies
@@ -24,4 +25,11 @@ class Movie < ActiveRecord::Base
     where(total_gross: nil)
   end
 
+  def self.tous
+  Movie.all
+ #   where(total_gross: nil)
   end
+
+
+
+end

@@ -3,7 +3,7 @@ Flix::Application.routes.draw do
 
   root    "movies#index"
   resources :movies
-
+  get     "movies_all"     =>     "movies#tous" , as: :movies_all
 =begin
 
   get "movies" => "movies#index"
