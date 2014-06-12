@@ -7,6 +7,24 @@
 <%= @movie.released_on %>
 <%# = number_to_currency(@movie.total_gross) %>
 <%= format_total_gross(@movie) %>
+<h3>Cast</h3>
+<p>
+  <%= @movie.cast %>
+</p>
+
+<h3>Director</h3>
+<p>
+  <%= @movie.director %>
+</p>
+
+<h3>Duration</h3>
+<p>
+  <%= @movie.duration %>
+</p>
+
+<h3>Image</h3>
+<%= image_for(@movie) %>
+
 
 <nav>
 <%= link_to 'All Movies', movies_path(@movies), method: :get %>

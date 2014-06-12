@@ -25,9 +25,8 @@ class Movie < ActiveRecord::Base
     where(total_gross: nil)
   end
 
-  def self.tous
+  def self.tous # affiche tous les films
   Movie.all
- #   where(total_gross: nil)
   end
 
 

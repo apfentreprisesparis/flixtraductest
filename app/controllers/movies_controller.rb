@@ -55,7 +55,7 @@ class MoviesController < ApplicationController
   end
 
   def tous
-    @movies = Movie.tous
+    @movies = Movie.tous # va chercher la méthode tous dans movie.rb
     render :index
   end
 
