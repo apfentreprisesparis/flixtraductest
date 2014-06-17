@@ -1,0 +1,38 @@
+// Place all the styles related to the movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-color: #a8be12;
+$secondary-color: #F0F0F0;
+
+header#page-header {
+  color: $secondary-color;
+  background: $primary-color;
+  padding: 5px;
+  border-bottom: 3px solid darken($primary-color, 10%);
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+a {
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+footer#page-footer {
+  color: $primary-color;
+  background: $secondary-color;
+  text-align: center;
+  padding: 5px;
+  border-top: 3px solid darken($secondary-color, 10%);
+}
+
+aside#sidebar {
+  float: right;
+  background: #F0F0F0;
+  width: 200px;
+}
+

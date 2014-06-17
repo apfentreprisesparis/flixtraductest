@@ -2,12 +2,13 @@ source 'https://rubygems.org'
 
 group :test, :development do
   gem "rspec-rails", "2.13.1"
+
 end
 
 group :test do
   gem "capybara", "2.1.0"
 end
-gem 'hirb'
+gem 'jazz_hands'
 gem 'rake', '~> 10.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -55,3 +56,4 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'quiet_assets'
+gem 'jazz_hands'

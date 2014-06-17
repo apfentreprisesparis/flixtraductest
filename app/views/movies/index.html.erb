@@ -1,11 +1,15 @@
 <p>
-<%= movietous %>
+  <%= movietous %> <!--Si on le lien fait appel à index -> affiche selection de films sinon affiche tout les films -->
 </p>
-<ul>
-  <% @movies.each do |movie| %>
-      <li>
 
-        <%= movie.id %>
+<%= @routes = movies_path %>
+<ul>
+<% @movies.each do |movie| %>
+      <article class="movie">
+
+        <li>
+
+          <%= movie.id %>
         <%= link_to(movie.title, movie) %>
         <%= movie.rating %>
         <%= truncate(movie.description, length: 40, separator: ' ') %>
@@ -14,19 +18,12 @@
         <%= format_total_gross(movie) %>
         <%= movie.cast%>
         <%= movie.duration%>
-        <%= image_for(movie) %>
+          <%= image_for(movie) %>
         <%= link_to 'Edit', edit_movie_path(movie.id), method: :get %>
-
       </li>
-  <% end%>
+
+        <hr>
+<% end%>
+
 </ul>
 
-<%= link_to('Add New Movie', new_movie_path) %>
-<p>
-  <%= link_to('Tout afficher', movies_all_path, controller: 'movies', action: 'tous') %>
-</p>
-<p>
-  <%= link_to('index des films sortis', movies_path, controller: 'movies', action: 'index') %>
-</p>
-
-<%= render 'movies/footer' %>

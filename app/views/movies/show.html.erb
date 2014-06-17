@@ -1,6 +1,3 @@
-
-
-
 <%= @movie.title.upcase %>
 <%= @movie.rating %>
 <%= @movie.description %>
@@ -27,9 +24,8 @@
 
 
 <nav>
-<%= link_to 'All Movies', movies_path(@movies), method: :get %>
-<%= link_to 'Edit', edit_movie_path(@movie), method: :get %>
-<%= link_to 'Delete', movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_movie_path(@movie), method: :get %>
+  <%= link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: 'Are you sure?'} %>
 
 </nav>
 
